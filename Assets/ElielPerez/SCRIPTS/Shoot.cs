@@ -7,15 +7,15 @@ public class Shoot : MonoBehaviour
 
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 10f;
-    public float fireRate = 0.5f;
-    public int maxProjectiles = 10;
-    public float reloadTime = 3f;
+    [SerializeField] private float projectileSpeed = 10f;
+    [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private int maxProjectiles = 10;
+    [SerializeField] private float reloadTime = 3f;
 
-    private float nextFireTime;
-    private float nextReloadTime;
+    [SerializeField] private float nextFireTime;
+    [SerializeField] private float nextReloadTime;
     public Queue<GameObject> projectileQueue = new Queue<GameObject>();
-    private int currentProjectiles;
+    [SerializeField] private int currentProjectiles;
 
     void Start()
     {
